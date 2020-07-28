@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.ViewOutlineProvider
 import androidx.appcompat.widget.AppCompatImageView
+import kotlin.math.min
 
 
 /**
@@ -19,5 +20,20 @@ class CircleImageView @JvmOverloads constructor(
         clipToOutline = true
         //use the following background to calculate the outline
         setBackgroundResource(R.drawable.bg_circle)
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        //width and height values are received as encoded into an Int, to decode them
+        //we have to use View.MeasureSpace.getSize() method
+        val width = MeasureSpec.getSize(widthMeasureSpec)
+        val height = MeasureSpec.getSize(heightMeasureSpec)
+        //we want to make sure width and height are same and if they are different
+        //then we want to take the min of width and height. Keeping width and height
+        //same is necessary as otherwise our view will not be a perfect circle.
+        val minDimension = min(width, height)
+
+        //call this method to let parent view know that we want this view to be
+        //this much wide and tall
+        setMeasuredDimension(minDimension, minDimension)
     }
 }

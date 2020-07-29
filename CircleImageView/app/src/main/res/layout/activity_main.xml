@@ -18,8 +18,7 @@
     <github.informramiz.simplecircleimageview.CircleImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:text="Hello World!"
-        android:src="@drawable/ironman" />
+        app:civ_src="@drawable/ironman" />
 
     <TextView
         android:layout_width="match_parent"
@@ -32,7 +31,6 @@
     <github.informramiz.simplecircleimageview.BorderedCircleImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:text="Hello World!"
         app:bciv_src="@drawable/ironman"
         app:bciv_border_size="4dp"
         app:bciv_border_color="@android:color/holo_red_light" />

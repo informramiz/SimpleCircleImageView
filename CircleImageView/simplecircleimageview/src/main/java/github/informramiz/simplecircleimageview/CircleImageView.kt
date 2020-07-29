@@ -1,9 +1,11 @@
 package github.informramiz.simplecircleimageview
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.ViewOutlineProvider
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.content.withStyledAttributes
 import kotlin.math.min
 
 
@@ -13,6 +15,8 @@ import kotlin.math.min
 class CircleImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : AppCompatImageView(context, attrs, defStyleAttr) {
+    private var customDrawable: Drawable? = null
+
     init {
         //the outline (view edges) of the view should be derived from the background
         outlineProvider = ViewOutlineProvider.BACKGROUND
@@ -23,6 +27,12 @@ class CircleImageView @JvmOverloads constructor(
 
         //fill in the whole image view, crop if needed from while keeping the center
         scaleType = ScaleType.CENTER_CROP
+
+        context.withStyledAttributes(attrs, R.styleable.CircleImageView) {
+            customDrawable = getDrawable(R.styleable.CircleImageView_civ_src)
+        }
+
+        customDrawable?.let { setImageDrawable(it) }
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

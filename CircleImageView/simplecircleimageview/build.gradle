@@ -1,7 +1,29 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.jfrog.bintray'
+
+ext {
+    //library full name is made as: GROUP_ID:ARTIFACT_ID:VERSION_ID
+    publishedGroupId = 'io.github.informramiz'
+    artifact = 'simplecircleimageview'
+    libraryName = 'SimpleCircleImageView'
+    libraryVersion = version_name
+
+    //bintray maven repo name
+    bintrayRepo = 'maven'
+    //bintray package name for this library
+    bintrayName = 'Simple-Circle-ImageView'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+    libraryDescription = 'A light weight file picker library based on Android Storage Access Framework (SAF).'
+    siteUrl = 'https://github.com/informramiz/SimpleCircleImageView'
+    gitUrl = 'https://github.com/informramiz/SimpleCircleImageView.git'
+
+    developerId = 'informramiz'
+    developerName = 'Ramiz Raja'
+    developerEmail = 'informramiz@gmail.com'
+}
 
 android {
     compileSdkVersion target_sdkVersion
@@ -18,7 +40,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -38,5 +60,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:$coreKtxVersion"
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
-
 }
+
+apply from: 'https://gist.githubusercontent.com/informramiz/95f5baee4a79b101c9d3b4ab90fee378/raw/35f6e5744717d35d235f860ae833157531677d95/bintray.gradle'
+apply from: 'https://gist.githubusercontent.com/informramiz/f23716a2086b0bf5ba8517d660d43dd6/raw/da6da59834b2cc62d3b944abb8026fba2f55a2b5/install.gradle'

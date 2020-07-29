@@ -22,7 +22,7 @@ class BorderedCircleImageView @JvmOverloads constructor(
     private var borderSize = 0
     private var borderColor: Int = Color.GRAY
     private var imageDrawable: Drawable? = null
-    private var circleImageView: github.informramiz.simplecircleimageview.CircleImageView
+    private var circleImageView: CircleImageView
 
     init {
         //the outline (view edges) of the view should be derived from the background
@@ -62,8 +62,8 @@ class BorderedCircleImageView @JvmOverloads constructor(
         return drawable
     }
 
-    private fun getCircleImageView(): github.informramiz.simplecircleimageview.CircleImageView {
-        return github.informramiz.simplecircleimageview.CircleImageView(context).apply {
+    private fun getCircleImageView(): CircleImageView {
+        return CircleImageView(context).apply {
             val newLayoutParams = LayoutParams(
                 LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT

@@ -33,4 +33,9 @@ ext {
 
     coreKtxVersion = "1.3.1"
     appCompatVersion = "1.1.0"
+
+    //library full name is made as: GROUP_ID:ARTIFACT_ID:VERSION_ID
+    publishedGroupId = 'io.github.informramiz'
+    artifact = 'simplecircleimageview'
+    libraryVersion = version_code
 }

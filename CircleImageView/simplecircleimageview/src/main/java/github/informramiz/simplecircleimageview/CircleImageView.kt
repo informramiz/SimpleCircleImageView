@@ -1,4 +1,4 @@
-package github.informramiz.circleimageview
+package github.informramiz.simplecircleimageview
 
 import android.content.Context
 import android.util.AttributeSet

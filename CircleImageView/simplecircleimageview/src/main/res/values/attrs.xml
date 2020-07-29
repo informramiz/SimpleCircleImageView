@@ -5,4 +5,5 @@
         <attr name="bciv_border_color" format="color"/>
         <attr name="bciv_border_size" format="dimension"/>
     </declare-styleable>
+    <public/>
 </resources>

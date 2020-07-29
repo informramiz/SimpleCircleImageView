@@ -13,10 +13,9 @@
         android:layout_height="wrap_content"
         android:text="@string/label_without_border"
         android:textStyle="bold|italic"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"/>
+        android:layout_marginStart="8dp" />
 
-    <github.informramiz.circleimageview.CircleImageView
+    <github.informramiz.simplecircleimageview.CircleImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:text="Hello World!"
@@ -28,10 +27,9 @@
         android:text="@string/with_border"
         android:layout_marginTop="30dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:textStyle="bold|italic"/>
 
-    <github.informramiz.circleimageview.BorderedCircleImageView
+    <github.informramiz.simplecircleimageview.BorderedCircleImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:text="Hello World!"

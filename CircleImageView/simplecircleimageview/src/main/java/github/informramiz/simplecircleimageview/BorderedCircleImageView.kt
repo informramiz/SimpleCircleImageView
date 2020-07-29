@@ -1,4 +1,4 @@
-package github.informramiz.circleimageview
+package github.informramiz.simplecircleimageview
 
 import android.content.Context
 import android.graphics.Color
@@ -8,9 +8,7 @@ import android.util.AttributeSet
 import android.view.ViewGroup
 import android.view.ViewOutlineProvider
 import android.widget.FrameLayout
-import androidx.core.content.ContextCompat
 import androidx.core.content.withStyledAttributes
-import androidx.core.view.setMargins
 import androidx.core.view.setPadding
 
 
@@ -24,7 +22,7 @@ class BorderedCircleImageView @JvmOverloads constructor(
     private var borderSize = 0
     private var borderColor: Int = Color.GRAY
     private var imageDrawable: Drawable? = null
-    private var circleImageView: CircleImageView
+    private var circleImageView: github.informramiz.simplecircleimageview.CircleImageView
 
     init {
         //the outline (view edges) of the view should be derived from the background
@@ -64,8 +62,8 @@ class BorderedCircleImageView @JvmOverloads constructor(
         return drawable
     }
 
-    private fun getCircleImageView(): CircleImageView {
-        return CircleImageView(context).apply {
+    private fun getCircleImageView(): github.informramiz.simplecircleimageview.CircleImageView {
+        return github.informramiz.simplecircleimageview.CircleImageView(context).apply {
             val newLayoutParams = LayoutParams(
                 LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT

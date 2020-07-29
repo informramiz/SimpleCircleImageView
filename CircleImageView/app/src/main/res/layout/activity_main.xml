@@ -37,10 +37,6 @@
         android:text="Hello World!"
         app:bciv_src="@drawable/ironman"
         app:bciv_border_size="4dp"
-        app:bciv_border_color="@android:color/holo_red_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:bciv_border_color="@android:color/holo_red_light" />
 
 </LinearLayout>

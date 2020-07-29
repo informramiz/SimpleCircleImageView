@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CircleImageView</string>
+    <string name="label_without_border">Without Border</string>
+    <string name="with_border">With Border</string>
 </resources>

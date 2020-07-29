@@ -20,6 +20,9 @@ class CircleImageView @JvmOverloads constructor(
         clipToOutline = true
         //use the following background to calculate the outline
         setBackgroundResource(R.drawable.bg_circle)
+
+        //fill in the whole image view, crop if needed from while keeping the center
+        scaleType = ScaleType.CENTER_CROP
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

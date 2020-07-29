@@ -1,2 +1,3 @@
+include ':simplecircleimageview'
 include ':app'
 rootProject.name = "CircleImageView"

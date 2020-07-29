@@ -1,6 +1,7 @@
 package github.informramiz.circleimageview
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.ViewGroup
@@ -22,17 +23,25 @@ class BorderedCircleImageView @JvmOverloads constructor(
         //cut the view to match the view to the outline of the background
         clipToOutline = true
         //use the following background to calculate the outline
-        setBackgroundResource(R.drawable.bg_circle)
-        val drawable = background.mutate()
+        background = getBackgroundDrawable()
+
+        //add the circle image as the child view
+        addView(getCircleImageView())
+    }
+
+    private fun getBackgroundDrawable(): Drawable {
+        //get the circle drawable, and we must call mutate() as otherwise all screens will
+        //use the same instance of this drawable and changing it on one screen will
+        // change it on all other screens which is not what we want. That's why we call mutate()
+        // so that a mutable copy is created
+        val drawable = context.getDrawable(R.drawable.bg_circle)!!.mutate()
         (drawable as GradientDrawable).setColor(
             ContextCompat.getColor(
                 context,
                 android.R.color.darker_gray
             )
         )
-        background = drawable
-
-        addView(getCircleImageView())
+        return drawable
     }
 
     private fun getCircleImageView(): CircleImageView {

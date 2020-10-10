@@ -29,10 +29,13 @@
     </style>
 
     <style name="ShapeAppearance.App.CutImageView" parent="">
-        <item name="cornerFamily">cut</item>
         <item name="cornerSizeTopRight">32dp</item>
         <item name="cornerSizeTopLeft">32dp</item>
         <item name="cornerSizeBottomLeft">32dp</item>
         <item name="cornerSizeBottomRight">32dp</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
     </style>
 </resources>

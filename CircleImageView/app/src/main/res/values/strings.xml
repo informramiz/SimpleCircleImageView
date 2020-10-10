@@ -3,4 +3,5 @@
     <string name="label_without_border">Without Border</string>
     <string name="with_border">With Border</string>
     <string name="title_activity_material">ShapeableImageView</string>
+    <string name="label_material_image">Open Material Image Styles</string>
 </resources>

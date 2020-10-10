@@ -12,6 +12,10 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="Widget.App.CircleImageView" parent="">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.CircleImageView</item>
+    </style>
+
     <style name="Widget.App.CircleImageView.Bordered" parent="">
         <item name="strokeWidth">4dp</item>
         <item name="android:paddingTop">3dp</item>

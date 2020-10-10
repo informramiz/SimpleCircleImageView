@@ -23,4 +23,16 @@
         <item name="strokeColor">@android:color/holo_red_light</item>
         <item name="shapeAppearance">@style/ShapeAppearance.App.CircleImageView</item>
     </style>
+
+    <style name="Widget.App.CutImageView" parent="">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.CutImageView</item>
+    </style>
+
+    <style name="ShapeAppearance.App.CutImageView" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopRight">32dp</item>
+        <item name="cornerSizeTopLeft">32dp</item>
+        <item name="cornerSizeBottomLeft">32dp</item>
+        <item name="cornerSizeBottomRight">32dp</item>
+    </style>
 </resources>

@@ -6,3 +6,11 @@ Every company and app I have got a chance to work on, I have seen one common thi
 That's why I have written this app as a show case to show how simple it is to actually create a CircleImageView without using any 3rd party library.
 
 ![demo](demo/demo.png)
+
+### Download
+
+If you want to use the old method without the Material Design Library's ShapeableImageView then I have put it into a library.
+
+```
+implementation "io.github.informramiz:simplecircleimageview:1.2.0
+```

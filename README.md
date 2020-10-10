@@ -5,7 +5,9 @@ Every company and app I have got a chance to work on, I have seen one common thi
 
 That's why I have written this app as a show case to show how simple it is to actually create a CircleImageView without using any 3rd party library.
 
-![demo](demo/demo.png)
+| No Library | Material Design Library |
+| -----------| ----------|
+| ![demo](demo/demo.png) | ![demo](demo/demo3.png) |
 
 ### Download
 
